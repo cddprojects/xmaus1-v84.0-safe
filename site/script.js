@@ -1,5 +1,5 @@
 (function () {
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('header nav a'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('header nav a[href^="#"]'));
   if ('IntersectionObserver' in window && navLinks.length) {
     var map = {};
     navLinks.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
@@ -15,6 +15,7 @@
   }
 
   var form = document.getElementById('enquiry');
+  if (!form) return;
   var confirmBox = document.getElementById('confirm');
   var messages = {
     name: 'Please enter your name.',
@@ -46,9 +47,7 @@
 
     function done() {
       form.reset();
-      confirmBox.textContent = 'Thanks, we’ve received your question. We’ll reply to the email address you gave us.';
-      confirmBox.hidden = false;
-      confirmBox.focus();
+      window.location.href = 'thank-you.html';
     }
     function fail() {
       confirmBox.textContent = 'Sorry, something went wrong and your question wasn’t sent. Please try again in a few minutes.';

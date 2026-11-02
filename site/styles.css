@@ -373,3 +373,25 @@ nav a[aria-current="true"] { background: rgba(15,61,51,.09); color: var(--ink); 
   nav a { white-space: nowrap; }
   html { scroll-padding-top: 124px; }
 }
+
+.doc h1 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 1.2rem; }
+.doc h2 { font-size: 1.35rem; margin: 2.4rem 0 .7rem; letter-spacing: -.01em; }
+.doc h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+.doc p, .doc li { color: var(--ink-2); line-height: 1.7; }
+.doc ul { padding-left: 1.2rem; }
+.doc li { margin-bottom: .5rem; }
+.doc .meta-line { color: var(--ink-2); font-size: .92rem; margin-bottom: 1.5rem; }
+.doc .vm { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.doc .card { background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 1.4rem; }
+.doc .card p { margin: 0; }
+.doc ul.ticks { list-style: none; padding: 0; }
+.doc ul.ticks li { display: flex; gap: .8rem; align-items: flex-start; }
+.doc ul.ticks .ico { flex: none; width: 1.3rem; height: 1.3rem; margin-top: .25rem; color: var(--forest-2); }
+.thanks { padding: 6rem 0 7rem; }
+.thanks .center { text-align: center; }
+.thanks h1 { font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.02em; margin: 1.2rem 0 .8rem; }
+.thanks .lead { max-width: 34rem; margin: 0 auto 2rem; }
+.thanks .tick { display: inline-flex; width: 72px; height: 72px; border-radius: 50%; background: var(--mint); color: var(--forest); align-items: center; justify-content: center; }
+.thanks .tick .ico { width: 34px; height: 34px; }
+@media (max-width: 700px) { .doc .vm { grid-template-columns: 1fr; } }
+.doc section { padding: 0; }
