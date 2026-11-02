@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -38,7 +38,7 @@
     <div class="wrap bar">
       <a class="brand" href="#top">
         <span class="mark" aria-hidden="true"><svg class="ico"><use href="#i-house"/></svg></span>
-        <span>Flexible Work Guide</span>
+        <span>Fitnimbly</span>
       </a>
       <nav aria-label="Guide sections">
         <ul>
@@ -290,7 +290,7 @@
             <textarea id="question" name="question" rows="5" required></textarea>
             <p class="error" id="question-error" role="alert"></p>
           </div>
-          <p class="small">We’ll use your email address to respond to your enquiry. Read our <a href="privacy.html">Privacy page</a>.</p>
+          <p class="small">We’ll use your email address to respond to your enquiry. Read our <a href="/privacy-policy/">Privacy page</a>.</p>
           <button class="btn primary" type="submit">Send your question</button>
           <p class="confirm" id="confirm" role="status" tabindex="-1" hidden>Thanks, we’ve received your question. We’ll reply to the email address you gave us.</p>
         </form>
@@ -315,15 +315,15 @@
 
   <footer class="site-footer">
     <div class="wrap foot">
-      <p class="copy">© 2026 Flexible Work Guide Australia. All rights reserved.</p>
+      <p class="copy">© 2026 Fitnimbly Australia. All rights reserved.</p>
       <address>
         <span>Pitt Street, Haymarket NSW 2000</span><br>
-        <a href="mailto:info@flexible.com">info@flexible.com</a>
+        <a href="mailto:info@fitnimbly.com">info@fitnimbly.com</a>
       </address>
       <p class="disclaimer">General information only. Applications and hiring decisions are made by employers.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>

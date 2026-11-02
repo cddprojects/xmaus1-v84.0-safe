@@ -47,7 +47,7 @@
 
     function done() {
       form.reset();
-      window.location.href = 'thank-you.html';
+      window.location.href = '/thank-you/';
     }
     function fail() {
       confirmBox.textContent = 'Sorry, something went wrong and your question wasn’t sent. Please try again in a few minutes.';
