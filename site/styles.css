@@ -299,7 +299,7 @@ input[type="text"]:hover, input[type="email"]:hover, select:hover, textarea:hove
 .three { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 1.6rem; box-shadow: 0 30px 60px -24px rgba(15,61,51,.25), 0 6px 14px rgba(15,61,51,.06); transform: rotate(1deg); }
 .three .row { display: grid; grid-template-columns: 46px 1fr; gap: .2rem 1rem; align-items: center; padding: 1rem 0; border-top: 1px solid var(--line); }
 .three .ex { margin-bottom: .8rem; }
-.three .row:first-of-type { border-top: 0; }
+.three .row:first-child { border-top: 0; padding-top: .2rem; }
 .three .row b { display: block; color: var(--ink); font-size: 1.15rem; line-height: 1.2; }
 .three .row small { color: var(--muted); font-size: .85rem; }
 .three .ans { grid-column: 2; font-size: .92rem; color: var(--ink); background: var(--alt); border-radius: 999px; padding: .25rem .8rem; justify-self: start; }
