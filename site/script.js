@@ -1,4 +1,19 @@
 (function () {
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('header nav a'));
+  if ('IntersectionObserver' in window && navLinks.length) {
+    var map = {};
+    navLinks.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && map[entry.target.id]) {
+          navLinks.forEach(function (a) { a.removeAttribute('aria-current'); });
+          map[entry.target.id].setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+
   var form = document.getElementById('enquiry');
   var confirmBox = document.getElementById('confirm');
   var messages = {
