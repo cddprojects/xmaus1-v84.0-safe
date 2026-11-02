@@ -322,3 +322,29 @@ table.compare tbody th { color: var(--ink); white-space: nowrap; font-weight: 65
 .types { font-size: .92rem; color: var(--muted); margin: -.8rem 0 1.4rem; }
 .types b { color: var(--forest-2); font-weight: 650; }
 @media (max-width: 680px) { .three { transform: none; } }
+
+.goals { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
+.goals li { display: grid; grid-template-columns: 1fr 28px 1.5fr; gap: 1rem; align-items: center; }
+.goals .g { background: var(--sand); color: var(--amber-ink); border-radius: 14px; padding: .95rem 1.2rem; font-weight: 650; }
+.goals .a { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: .95rem 1.2rem; color: var(--ink); }
+.goals .arrow { color: var(--clay); width: 24px; height: 24px; }
+.group-h { margin: 2.2rem 0 1rem; }
+.group-h:first-of-type { margin-top: 0; }
+.opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.opt { background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 1.8rem; display: flex; flex-direction: column; }
+.opt .badge { background: var(--mint); color: var(--forest); }
+.opt h3 { font-size: 1.3rem; }
+.opt p { margin-bottom: .8rem; }
+.opt .worth { margin: auto 0 0; padding-top: .9rem; border-top: 1px solid var(--line); font-size: .95rem; color: var(--muted); }
+.opt .worth a { font-weight: 600; }
+table.compare.two { min-width: 0; }
+table.compare.two thead th:first-child, table.compare.two tbody th { width: 34%; white-space: normal; }
+.small.tight { margin: .9rem 0 1.2rem; }
+.tight-top { margin-top: 0; }
+.start-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.steps { list-style: none; counter-reset: s; margin: 1rem 0 1.4rem; padding: 0; display: grid; gap: .6rem; }
+.steps li { counter-increment: s; display: flex; gap: .9rem; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: .85rem 1.1rem; color: var(--ink); font-weight: 550; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--forest); color: #fff; font-size: .85rem; font-weight: 700; flex: none; }
+.acc p + p { margin-top: -.6rem; }
+@media (max-width: 1020px) { .opts, .start-grid { grid-template-columns: 1fr; } .start-grid { gap: 2rem; } }
+@media (max-width: 680px) { .goals li { grid-template-columns: 1fr; gap: .4rem; } .goals .arrow { transform: rotate(90deg); margin-left: .8rem; } }
