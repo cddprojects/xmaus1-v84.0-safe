@@ -352,11 +352,11 @@ table.compare.two thead th:first-child, table.compare.two tbody th { width: 34%;
 .site-footer address { font-style: normal; line-height: 1.7; margin-bottom: .8rem; }
 .site-footer .disclaimer { color: #93a59c; font-size: .88rem; }
 
-.bar { display: grid; grid-template-columns: 1fr auto 1fr; }
-.bar .small-btn { justify-self: end; }
+.bar { display: flex; justify-content: space-between; gap: 1.5rem; }
+.bar .small-btn { flex-shrink: 0; }
 nav a[aria-current="true"] { background: rgba(15,61,51,.09); color: var(--ink); }
 @media (max-width: 1020px) {
-  .bar { gap: .6rem; }
+  .bar { gap: 1rem; }
   nav a { padding: .4rem .5rem; font-size: .9rem; }
   nav ul { gap: 0; }
 }
@@ -366,7 +366,7 @@ nav a[aria-current="true"] { background: rgba(15,61,51,.09); color: var(--ink); 
   .small-btn { padding: .5rem 1rem; }
 }
 @media (max-width: 700px) {
-  .bar { grid-template-columns: 1fr auto; row-gap: 0; padding-top: .5rem; }
+  .bar { display: grid; grid-template-columns: 1fr auto; row-gap: 0; padding-top: .5rem; }
   nav { grid-column: 1 / -1; grid-row: 2; overflow-x: auto; margin: 0 -.2rem; padding-bottom: .5rem; scrollbar-width: none; }
   nav::-webkit-scrollbar { display: none; }
   nav ul { justify-content: flex-start; flex-wrap: nowrap; }
