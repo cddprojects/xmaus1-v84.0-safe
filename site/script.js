@@ -1,4 +1,30 @@
 (function () {
+  document.documentElement.classList.add('js');
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('#explorer .tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('#explorer .panel'));
+  function selectTab(index, focus) {
+    tabs.forEach(function (tab, i) {
+      var on = i === index;
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+      panels[i].hidden = !on;
+    });
+    if (focus) tabs[index].focus();
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectTab(i, false); });
+    tab.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === 'Home') next = 0;
+      if (e.key === 'End') next = tabs.length - 1;
+      if (next !== null) { e.preventDefault(); selectTab(next, true); }
+    });
+  });
+  if (tabs.length) selectTab(0, false);
+
   var boxes = document.querySelectorAll('.checklist input[type="checkbox"]');
   var progress = document.getElementById('progress');
   var storageKey = 'fwg-checklist';
