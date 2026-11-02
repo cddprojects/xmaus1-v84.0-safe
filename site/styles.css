@@ -348,3 +348,7 @@ table.compare.two thead th:first-child, table.compare.two tbody th { width: 34%;
 .acc p + p { margin-top: -.6rem; }
 @media (max-width: 1020px) { .opts, .start-grid { grid-template-columns: 1fr; } .start-grid { gap: 2rem; } }
 @media (max-width: 680px) { .goals li { grid-template-columns: 1fr; gap: .4rem; } .goals .arrow { transform: rotate(90deg); margin-left: .8rem; } }
+
+.site-footer .copy { font-weight: 600; color: #fff; margin-bottom: .6rem; }
+.site-footer address { font-style: normal; line-height: 1.7; margin-bottom: .8rem; }
+.site-footer .disclaimer { color: #93a59c; font-size: .88rem; }
