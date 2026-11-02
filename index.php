@@ -38,7 +38,7 @@
     <div class="wrap bar">
       <a class="brand" href="#top">
         <span class="mark" aria-hidden="true"><svg class="ico"><use href="#i-house"/></svg></span>
-        <span>Fitnimbly</span>
+        <span>Roleblend</span>
       </a>
       <nav aria-label="Guide sections">
         <ul>
@@ -315,10 +315,10 @@
 
   <footer class="site-footer">
     <div class="wrap foot">
-      <p class="copy">© 2026 Fitnimbly Australia. All rights reserved.</p>
+      <p class="copy">© 2026 Roleblend Australia. All rights reserved.</p>
       <address>
         <span>Pitt Street, Haymarket NSW 2000</span><br>
-        <a href="mailto:info@fitnimbly.com">info@fitnimbly.com</a>
+        <a href="mailto:info@roleblend.com">info@roleblend.com</a>
       </address>
       <p class="disclaimer">General information only. Applications and hiring decisions are made by employers.</p>
     </div>
