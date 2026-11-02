@@ -14,6 +14,8 @@
       if (box.checked) done += 1;
     });
     progress.textContent = done + ' of ' + boxes.length + ' done';
+    var fill = document.getElementById('bar-fill');
+    if (fill) fill.style.width = (done / boxes.length * 100) + '%';
     try { localStorage.setItem(storageKey, JSON.stringify(state)); } catch (e) {}
   }
   var saved = readSaved();
